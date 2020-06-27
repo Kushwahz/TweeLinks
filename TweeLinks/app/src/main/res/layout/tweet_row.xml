@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:paddingLeft="2dp"
+            android:paddingTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_twitter_icon"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/im_Author"
+                app:border_color="@color/bodyTextColor"
+                app:border_width="0dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:weightSum="50"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Name"
+                        android:textStyle="bold"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="0dp"
+                        android:textColor="#666666"
+                        android:id="@+id/text_UserName"
+                        android:layout_weight="50" />
+
+                    <TextView
+                        android:textColor="#1DA1F3"
+                        android:text="\@username"
+                        android:paddingLeft="5sp"
+                        android:layout_gravity="left|center_vertical"
+                        android:textSize="13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_ScreenName"
+                        android:layout_weight="50" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tweet_delete"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical|left"
+                    android:gravity="left"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_width="11dp"
+                        android:src="@drawable/ic_delete_tweet"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Tweet"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tweet_content"
+            android:textColor="@color/cardview_dark_background"  />
+
+        <LinearLayout
+            android:layout_weight="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="left"
+                android:text="Date"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="0dp"
+                android:paddingRight="20dp"
+                android:textColor="#666666"
+                android:id="@+id/tweet_date"
+                android:layout_weight="60" />
+
+            <LinearLayout
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="5"
+                android:id="@+id/tweet_view"
+                android:layout_width="25dp"
+                android:layout_height="25dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tweet_view_im"
+                    android:src="@drawable/ic_not_viewed"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="5"
+                android:id="@+id/tweet_fav"
+                android:layout_width="25dp"
+                android:layout_height="25dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:id="@+id/tweet_fav_im"
+                    android:src="@drawable/ic_add_fav"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="5"
+                android:id="@+id/tweet_like"
+                android:layout_width="25dp"
+                android:layout_height="25dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:id="@+id/tweet_like_im"
+                    android:src="@drawable/ic_like"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="#e0e0e0">
+        </View>
+
+    </LinearLayout>
+</RelativeLayout>

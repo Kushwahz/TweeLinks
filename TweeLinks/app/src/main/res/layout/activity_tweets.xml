@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F5F5"
+    tools:context="com.helpmevishal.tweelinks.TweetsActivity">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/cNoticeTitle"
+        android:background="#1DA1F3">
+        <LinearLayout
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_weight="20"
+                android:id="@+id/cNotice_back"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_twitter_tweet"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_weight="60"
+                android:id="@+id/titleBar"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="TweeLinks"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFF">
+
+            </TextView>
+            <ImageView
+                android:visibility="gone"
+                android:layout_weight="20"
+                android:id="@+id/tweet_date"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_date_range_white_24dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/drop_shadow" >
+        </View>
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tweet_refresh"
+        android:layout_below="@+id/cNoticeTitle"
+        android:layout_above="@+id/bottomNavMain"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tweets_list"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:stackFromEnd="false"
+            tools:reverseLayout="false"
+            app:reverseLayout="false"
+            android:layout_below="@+id/cNoticeTitle"
+            android:layout_above="@+id/bottomNavMain">
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/bottomNavMain"
+        android:background="#FFFFFF">
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/bottombar_shadow" >
+        </View>
+
+        <LinearLayout
+            android:paddingTop="1dp"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/tweet_home_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_home_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="21dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tweet_search_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_search_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="21dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#1DA1F3"
+                android:id="@+id/tweet_feed_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_tweet_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="27dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tweet_date_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_date_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tweet_fav_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fav_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"  />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TweeLinks</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">RdocVlGnqKOB9kz3rd6KhnlFL</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">x6ePNYSOfR30DXnwr9y6Dhc9gNjQSfpeodzAzgMBIcCj8RLSxS</string>
+</resources>

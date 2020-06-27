@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1DA1F3"
+    tools:context="com.helpmevishal.tweelinks.Profile">
+
+    <LinearLayout
+        android:layout_above="@+id/bottomNavMain"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight="30"
+                android:id="@+id/imageView2"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                app:srcCompat="@drawable/ic_twitter_tweet" />
+
+            <TextView
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="40"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:text="Welcome to TweeLinks"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="30"
+                android:id="@+id/sign_out"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_sign_out" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="50dp"
+            android:id="@+id/im_myPic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_user"
+            app:border_color="#1DA1F3"
+            app:srcCompat="@drawable/ic_default_user" />
+
+        <TextView
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/screen_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="11dp" />
+
+        <LinearLayout
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="40dp"
+            android:id="@+id/fol_ll"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:layout_weight="49"
+                android:id="@+id/friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Following"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="#FFF"
+                android:layout_weight="0.2"
+                android:layout_width="1dp"
+                android:layout_height="12sp"
+                />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:layout_weight="49"
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Followers"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="About me"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/bottomNavMain"
+        android:background="#FFFFFF">
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/home_bottombar_shadow" >
+        </View>
+
+        <LinearLayout
+            android:paddingTop="1dp"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="#1DA1F3"
+                android:id="@+id/tweet_home_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_home_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="21dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tweet_search_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_search_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="21dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tweet_feed_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_tweet_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="27dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tweet_date_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_date_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tweet_fav_back"
+                android:layout_weight="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fav_not_sel"
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"  />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
